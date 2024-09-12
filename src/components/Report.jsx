@@ -46,7 +46,7 @@ export const Report = () => {
 
             <div>
                <label>
-                  Quantity:
+                  Quantity (Tonnes):
                   <input
                      type="number"
                      value={quantity}
@@ -57,7 +57,7 @@ export const Report = () => {
 
             <div>
                <label>
-                  Carbon Content:
+                  Carbon Content (%):
                   <input
                      type="number"
                      value={carbonContent}
@@ -68,7 +68,7 @@ export const Report = () => {
 
             <div>
                <label>
-                  Rate:
+                  Rate (Tonnes/hr):
                   <input
                      type="number"
                      value={rate}
@@ -78,38 +78,36 @@ export const Report = () => {
             </div>
 
             <div>
-               <fieldset>
-                  <legend>Coal Type:</legend>
-                  <label>
-                     <input
-                        type="checkbox"
-                        name="coking"
-                        checked={coalTypes.coking}
-                        onChange={handleCoalTypeChange}
-                     />
-                     Coking
-                  </label>
-                  <br />
-                  <label>
-                     <input
-                        type="checkbox"
-                        name="nonCoking"
-                        checked={coalTypes.nonCoking}
-                        onChange={handleCoalTypeChange}
-                     />
-                     Non-Coking
-                  </label>
-                  <br />
-                  <label>
-                     <input
-                        type="checkbox"
-                        name="semiCoking"
-                        checked={coalTypes.semiCoking}
-                        onChange={handleCoalTypeChange}
-                     />
-                     Semi-Coking
-                  </label>
-               </fieldset>
+               <legend>Coal Type:</legend>
+               <label>
+                  <input
+                     type="checkbox"
+                     name="coking"
+                     checked={coalTypes.coking}
+                     onChange={handleCoalTypeChange}
+                  />
+                  Coking
+               </label>
+               <br />
+               <label>
+                  <input
+                     type="checkbox"
+                     name="nonCoking"
+                     checked={coalTypes.nonCoking}
+                     onChange={handleCoalTypeChange}
+                  />
+                  Non-Coking
+               </label>
+               <br />
+               <label>
+                  <input
+                     type="checkbox"
+                     name="semiCoking"
+                     checked={coalTypes.semiCoking}
+                     onChange={handleCoalTypeChange}
+                  />
+                  Semi-Coking
+               </label>
             </div>
             <button type="submit">Submit</button>
          </form>
