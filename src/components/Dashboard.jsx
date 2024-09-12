@@ -4,6 +4,7 @@ import { PersonalDetails } from "./PersonalDetails";
 import { Attendance } from "./Attendance";
 import { Report } from "./Report";
 import { Equipment } from "./Equipment";
+import { BlastingLog } from "./BlastingLog";
 
 export const Dashboard = () => {
 
@@ -14,6 +15,7 @@ export const Dashboard = () => {
          <Attendance />
          <Report />
          <Equipment />
+         <BlastingLog />
       </>
    )
 }
