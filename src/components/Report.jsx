@@ -41,7 +41,9 @@ export const Report = () => {
 
    return (
       <div>
-         <h1>Production Report</h1>
+         <br />
+         <br />
+         <h1>Production Report:</h1>
          <form onSubmit={handleSubmitChange}>
             <div>
                <label>
