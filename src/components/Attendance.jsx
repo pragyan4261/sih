@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import workerDetails from "../data/workerDetails.json"
 
 export const Attendance = () => {
-   const [presentCount, setPresentCount] = useState(0);
+   
    const [attendance, setAttendance] = useState(
       workerDetails.reduce((acc, worker) => {
          acc[worker.name] = false;
          return acc;
       }, {})
    );
-
+   const [presentCount, setPresentCount] = useState(0);
+   useEffect(() => {
+      const count = Object.values(attendance).filter(status => status).length;
+      setPresentCount(count);
+   }, [attendance]);
 
    const handleCheckboxChange = (name) => {
       setAttendance((prevState) => ({
@@ -21,6 +25,7 @@ export const Attendance = () => {
    return (
       <>
          <h1 className="flex text-3xl font-serif w-full justify-center items-center font-bold mb-5">Worker Details:</h1>
+         <p>Total Present: {presentCount}</p>
          {workerDetails.map((user, index) => (
             <div key={index} className="flex flex-row border-2 rounded-2xl h-28 mb-5 p-5 border-black w-4/6 m-auto justify-between">
                <div className="flex flex-col">

@@ -2,6 +2,7 @@ import { useState } from "react";
 import CurrentLocation from "./Location";
 import { PersonalDetails } from "./PersonalDetails";
 import { Attendance } from "./Attendance";
+import { Report } from "./Report";
 
 export const Dashboard = () => {
 
@@ -20,6 +21,7 @@ export const Dashboard = () => {
          <PersonalDetails />
          <CurrentLocation />
          <Attendance />
+         <Report />
       </>
    )
 }
