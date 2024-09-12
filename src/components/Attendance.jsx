@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-export const Attendance = () => {
+export const Attendance = ({ inde }) => {
    // Initialize state with data from localStorage or with an empty object if not available
    const [attendance, setAttendance] = useState(() => {
-      const storedAttendance = localStorage.getItem("attendanceRecords");
+      const storedAttendance = localStorage.getItem(`attendanceRecord${inde}`);
       return storedAttendance ? JSON.parse(storedAttendance) : {};
    });
 
@@ -17,7 +17,7 @@ export const Attendance = () => {
       // Update present count whenever attendance changes
       const count = Object.values(attendance).filter(worker => worker.present).length;
       setPresentCount(count);
-      localStorage.setItem("attendanceRecords", JSON.stringify(attendance)); // Save to local storage
+      localStorage.setItem(`attendanceRecord${inde}`, JSON.stringify(attendance)); // Save to local storage
    }, [attendance]);
 
    const handleCheckboxChange = (name) => {

@@ -1,5 +1,9 @@
 import details from "../data/details.json"
 
+
+import { Attendance } from "./Attendance";
+import CurrentLocation from "./Location";
+
 export const PersonalDetails = () => {
    return (
       <>
@@ -10,7 +14,11 @@ export const PersonalDetails = () => {
                   <h2 className="text-2xl font-bold font-serif">{user.firstName} {user.lastName}</h2>
                   <p className="text-md font-semibold text-gray-600">Email: {user.email}</p>
                   <p className="text-md font-semibold text-gray-600">Contact Number: {user.contactNumber}</p>
+                  <CurrentLocation />
+
+                  <Attendance index={index} />
                </div>
+
             ))}
          </div>
 

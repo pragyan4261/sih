@@ -1,7 +1,7 @@
 
-import CurrentLocation from "./Location";
+// import CurrentLocation from "./Location";
 import { PersonalDetails } from "./PersonalDetails";
-import { Attendance } from "./Attendance";
+// import { Attendance } from "./Attendance";
 import { Report } from "./Report";
 import { Equipment } from "./Equipment";
 import { BlastingLog } from "./BlastingLog";
@@ -12,9 +12,9 @@ export const Dashboard = () => {
    return (
       <>
          <PersonalDetails />
-         <CurrentLocation />
+         {/* <CurrentLocation /> */}
          <Shifts />
-         <Attendance />
+         {/* <Attendance /> */}
          <Report />
          <Equipment />
          <BlastingLog />

@@ -1,8 +1,16 @@
 [
    {
-      "firstName": "Lionel",
-      "lastName": "Messi",
-      "email": "goat10@gmail.com",
+      "firstName": "Shift",
+      "lastName": "Foreman 1",
+      "id": 1,
+      "email": "foreman1@gmail.com",
       "contactNumber": 8943949475
+   },
+   {
+      "firstName": "Shift",
+      "lastName": "Foreman 2",
+      "id": 2,
+      "email": "foreman2@gmail.com",
+      "contactNumber": 9383949475
    }
 ]
